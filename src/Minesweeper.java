@@ -16,12 +16,15 @@ public class Minesweeper extends App {
         frame.setTitle("Minesweeper!");
         frame.setSize(400,400);
 
+        //add title text
         JLabel titleLabel = new JLabel("Minesweeper!", SwingConstants.CENTER);
         frame.add(titleLabel);
 
-        JButton button = new JButton();
-        BufferedImage buttonIcon = ImageIO.read(new File("images/button.png"));
-        button = new JButton("", buttonIcon);
+        //generate button
+        Icon buttonIcon = new ImageIcon("images/button.png");
+        JButton button = new JButton("", buttonIcon);
+        button.setSize(32, 32);
+        frame.add(button);
 
     }
 
